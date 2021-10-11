@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Oct 04 10:53:04 CAT 2021
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1633337584447
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact org.mockito\:error\:pom\:unknown from/to central (https\://repo.maven.apache.org/maven2)\: transfer failed for https\://repo.maven.apache.org/maven2/org/mockito/error/unknown/error-unknown.pom

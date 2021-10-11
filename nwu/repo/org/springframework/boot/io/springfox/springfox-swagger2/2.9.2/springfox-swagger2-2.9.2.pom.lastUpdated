@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sat Sep 18 08:09:22 CAT 2021
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1631945362492
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact io.springfox\:springfox-swagger2\:pom\:2.9.2 from/to central (https\://repo.maven.apache.org/maven2)\: transfer failed for https\://repo.maven.apache.org/maven2/io/springfox/springfox-swagger2/2.9.2/springfox-swagger2-2.9.2.pom

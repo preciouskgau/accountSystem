@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Sep 14 06:33:04 CAT 2021
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1631593984786
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact com.google.collections\:google-collections\:jar\:1.0 from/to central (https\://repo.maven.apache.org/maven2)\: transfer failed for https\://repo.maven.apache.org/maven2/com/google/collections/google-collections/1.0/google-collections-1.0.jar

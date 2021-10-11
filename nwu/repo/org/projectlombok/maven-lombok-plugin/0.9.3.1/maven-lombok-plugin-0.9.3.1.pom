@@ -1,0 +1,79 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok-maven</artifactId>
+    <version>0.9.3.1</version>
+  </parent>
+  <artifactId>maven-lombok-plugin</artifactId>
+  <packaging>maven-plugin</packaging>
+  <name>Maven Lombok Plugin</name>
+  <description>Maven Plugin for Project Lombok</description>
+  <!-- This needed so that the Plugin Documentation has the correct System Requirements. -->
+  <prerequisites>
+    <maven>${maven.api.version}</maven>
+  </prerequisites>
+  <properties>
+    <!-- Properties for Site documentation (may not use period). -->
+    <MavenLombokPluginVersion>${project.version}</MavenLombokPluginVersion>
+    <LombokVersion>${lombok.version}</LombokVersion>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-plugin-api</artifactId>
+      <version>${maven.api.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-project</artifactId>
+      <version>${maven.api.version}</version>
+      <!--
+        Note that Maven 2 and 3 always use the classes from the distro,
+        ignoring declared dependencies for Maven core stuff, so marking
+        this as provided to avoid risk around including a non thread-safe
+        plexus-utils dependency transitively.
+        See:  https://cwiki.apache.org/confluence/display/MAVEN/Parallel+builds+in+Maven+3
+      -->
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>${lombok.version}</version>
+    </dependency>
+  </dependencies>
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-plugin-plugin</artifactId>
+        <version>2.6</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-pmd-plugin</artifactId>
+        <version>2.5</version>
+        <configuration>
+          <targetJdk>1.6</targetJdk>
+          <rulesets>
+            <ruleset>/rulesets/basic.xml</ruleset>
+            <ruleset>/rulesets/braces.xml</ruleset>
+            <ruleset>/rulesets/codesize.xml</ruleset>
+            <ruleset>/rulesets/controversial.xml</ruleset>
+            <ruleset>/rulesets/coupling.xml</ruleset>
+            <ruleset>/rulesets/design.xml</ruleset>
+            <ruleset>/rulesets/imports.xml</ruleset>
+            <ruleset>/rulesets/migrating.xml</ruleset>
+            <ruleset>/rulesets/naming.xml</ruleset>
+            <ruleset>/rulesets/optimizations.xml</ruleset>
+            <ruleset>/rulesets/strictexception.xml</ruleset>
+            <ruleset>/rulesets/strings.xml</ruleset>
+            <ruleset>/rulesets/sunsecure.xml</ruleset>
+            <ruleset>/rulesets/unusedcode.xml</ruleset>
+          </rulesets>
+        </configuration>
+      </plugin>
+    </plugins>
+  </reporting>
+</project>

@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Sep 14 06:33:04 CAT 2021
+@default-central-https\://repo.maven.apache.org/maven2/.lastUpdated=1631593984661
+https\://repo.maven.apache.org/maven2/.error=Could not transfer artifact org.apache.maven\:maven-plugin-descriptor\:jar\:2.0.9 from/to central (https\://repo.maven.apache.org/maven2)\: transfer failed for https\://repo.maven.apache.org/maven2/org/apache/maven/maven-plugin-descriptor/2.0.9/maven-plugin-descriptor-2.0.9.jar
